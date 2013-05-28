@@ -52,7 +52,7 @@ Running PICNIC
 
 	Run the following command:
 
-	java -Xmx2G -jar CelFileConverter.jar -m Snp6FeatureMappings.csv -c 'cdf_file_including_path' -s 'directory name of cel files' -t rootDir/data/cancer/raw
+		java -Xmx2G -jar CelFileConverter.jar -m Snp6FeatureMappings.csv -c 'cdf_file_including_path' -s 'directory name of cel files' -t rootDir/data/cancer/raw
  
 	For further instructions on running the cel file converter type 
 		java -jar CelFileConverter.jar -h

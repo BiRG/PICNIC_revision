@@ -46,8 +46,7 @@ if (exist(dir_name,'dir'))
     disp(['Checking for raw files in ' dir_name]);
     no_names = length(x);
     disp(['Found ' num2str(no_names)]);
-    x = struct2cell(x);
-    cell_names = x(1,:)';
+    cell_names = cell
 else
     disp(['Dir does not exist' dir_name]);
     quit;

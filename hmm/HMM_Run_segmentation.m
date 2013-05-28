@@ -125,7 +125,7 @@ for name_no=1:size(cell_names,2)
     saveas(f,[t1,'/genome_fig_',cell_names{name_no},'.fig']);
     close all;
 	
-	% DCW -- below repairs a bug on the second iteration due to t1
+    % DCW -- below repairs a bug on the second iteration due to t1
     %        getting clobbered; needs a better solution
     t1=[currDir '/data/cancer/normalised'];
 end
