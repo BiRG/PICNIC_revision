@@ -34,7 +34,9 @@ A1 = T_coeffs(:,2);
 B0 = T_coeffs(:,3);
 B1 = T_coeffs(:,4);
 
-for fileNo=1:size(cell_names,1)
+% Process each file in the working directory
+num_cell_names = size(cell_names,2);
+for fileNo=1:num_cell_names
     inputFile=[t1 filesep cell_names{fileNo}];
     if exist(inputFile,'file')~=2
        % somehow quit the program

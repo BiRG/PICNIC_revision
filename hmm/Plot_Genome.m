@@ -30,7 +30,7 @@
 % OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-function Plot_Genome
+function Plot_Genome(figureHandle)
 
 
 % Set Global Variables
@@ -56,7 +56,7 @@ no_chr = seg_info.no_chr;
 
 % Plot figure
 max_height = max(block_mean)*1.5;
-figure
+figure(figureHandle);
 hold on;
 block_no = 0;
 plot([chr_end(no_chr),chr_end(no_chr)],[0,max_height],'k:','LineWidth',0.1);
