@@ -54,7 +54,6 @@ currDir=pwd;
 t1=[currDir '/data/cancer/normalised'];
 t2='*.feature_intensity';
 cell_names = Utils_ListNames(t1,t2);
-no_names = size(cell_names,2);
 
 % load in config.mat which contains all the parameters necessary
 load('config.mat','chr_info');
@@ -88,7 +87,8 @@ for chr_no = 1:seg_info.no_chr,
     SNP_pos{chr_no} = seg_info.SNP_pos(seg_info.chr_start(chr_no):seg_info.chr_end(chr_no),1);
 end
 
-for name_no=1:size(cell_names,2)
+no_names = length(cell_names);
+for name_no=1:no_names
 
     % Load data
     inputFile=[t1 '/' cell_names{name_no}];

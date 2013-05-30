@@ -52,9 +52,14 @@ for fileNo=1:num_cell_names
         raw_data = dlmread(inputFile,'\t',[1,4,no_SNPs,11]);
     end
     
+    % Set all values less than zero to zero.
     raw_data = raw_data.*(raw_data>0);
+    
+    % Normalize sum of each probe's features over what?
     norm_consts = sum(raw_data,2)./(2*sum(no_features,2)-1+SNP_ind);
     raw_data = raw_data/sum(norm_consts)*no_SNPs_female;
+    
+    % Partition the features into A and B subsets
     A = sum(raw_data(:,1:4),2)./no_features;
     B = sum(raw_data(:,5:8),2)./no_features;
 
