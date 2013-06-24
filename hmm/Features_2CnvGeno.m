@@ -52,7 +52,7 @@ for fileNo=1:num_cell_names
         raw_data = dlmread(inputFile,'\t',[1,4,no_SNPs,11]);
     end
     
-    % Set all values less than zero to zero.
+    % Set all values less than (or equal to) zero to zero.
     raw_data = raw_data.*(raw_data>0);
     
     % Normalize sum of each probe's features over what?
